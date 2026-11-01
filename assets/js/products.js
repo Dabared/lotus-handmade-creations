@@ -30,8 +30,8 @@ window.CATEGORIES = [
   { id: "crochet-toys", name: "Crochet Toys",             page: "crochet-toys.html",           image: "assets/images/products/pastel-puppy.webp",           blurb: "Soft crochet puppies, kitties, birds and animal friends." },
   { id: "baby",         name: "Baby Collection",          page: "baby-collection.html",        image: "assets/images/products/rainbow-baby-set.webp",  blurb: "Sweaters, sets, hats, booties and blankets in baby pastels." },
   { id: "home-decor",   name: "Home & Table Décor",       page: "home-table-decor.html",       image: "assets/images/products/table-doily.webp",   blurb: "Doilies, napkin rings and coasters for a beautiful table." },
-  { id: "car",          name: "Car Accessories",          page: "car-accessories.html",        image: "assets/images/products/car-charm.svg",     blurb: "Mirror charms and tissue covers to brighten your ride." },
-  { id: "bags",         name: "Bags & Purses",            page: "bags-purses.html",            image: "assets/images/products/tote-bag.svg",      blurb: "Everyday crochet totes and pretty coin purses." },
+  { id: "car",          name: "Car Accessories",          page: "car-accessories.html",        image: "assets/images/products/car-charm.webp",     blurb: "Mirror charms and tissue covers to brighten your ride." },
+  { id: "bags",         name: "Bags & Purses",            page: "bags-purses.html",            image: "assets/images/products/tote-bag.webp",      blurb: "Everyday crochet totes and pretty coin purses." },
   { id: "accessories",  name: "Hats & Accessories",       page: "hats-accessories.html",       image: "assets/images/products/beanie.svg",        blurb: "Beanies, scrunchies and cosy wool accessories." }
 ];
 
@@ -127,7 +127,7 @@ window.PRODUCTS = [
   {
     id: "LHC-010", name: "Flower Napkin Rings (Set of 6)", category: "home-decor",
     description: "Sample product. Crochet napkin rings with little flowers to dress up your serviettes for family dinners and parties.",
-    price: 2400, image: "assets/images/products/napkin-rings.svg",
+    price: 2400, image: "assets/images/products/napkin-rings.webp",
     colours: ["Maroon & Gold", "Gold & Maroon", "White & Gold"], availability: "In Stock",
     customisation: ["Set of 4 / 6 / 8", "Colours to match your table"],
     details: { Size: "Approx. 5 cm ring", Material: "Cotton yarn", Care: "Hand wash" },
@@ -136,7 +136,7 @@ window.PRODUCTS = [
   {
     id: "LHC-011", name: "Crochet Coaster Set", category: "home-decor",
     description: "Sample product. A set of round crochet coasters in maroon, gold and cream to protect your table in style.",
-    price: 1800, image: "assets/images/products/coasters.svg",
+    price: 1800, image: "assets/images/products/coasters.webp",
     colours: ["Maroon & Gold", "Cream", "Mixed"], availability: "In Stock",
     customisation: ["Set of 4 / 6", "Colour mix"],
     details: { Size: "Approx. 10 cm each", Material: "Cotton yarn", Care: "Hand wash" },
@@ -147,7 +147,7 @@ window.PRODUCTS = [
   {
     id: "LHC-012", name: "Car Mirror Flower Charm", category: "car",
     description: "Sample product. A crochet flower charm with beads and a tassel to hang from your car's rear-view mirror.",
-    price: 1500, image: "assets/images/products/car-charm.svg",
+    price: 1500, image: "assets/images/products/car-charm.webp",
     colours: ["Maroon & Gold", "Pink & White", "Light Blue & White"], availability: "In Stock",
     customisation: ["Flower colour", "Add initial bead"],
     details: { Size: "Approx. 22 cm drop", Material: "Cotton yarn & wooden beads", Care: "Spot clean" },
@@ -156,7 +156,7 @@ window.PRODUCTS = [
   {
     id: "LHC-013", name: "Car Tissue Box Cover", category: "car",
     description: "Sample product. A crochet tissue box cover in maroon with gold stripes and a flower — neat and pretty on the dashboard or back seat.",
-    price: 2800, image: "assets/images/products/car-tissue-cover.svg",
+    price: 2800, image: "assets/images/products/car-tissue-cover.webp",
     colours: ["Maroon & Gold", "Cream & Gold"], availability: "Made to Order",
     customisation: ["Colour", "Made to fit your tissue box size"],
     details: { Size: "Fits standard tissue boxes", Material: "Acrylic yarn", Care: "Hand wash" },
@@ -167,7 +167,7 @@ window.PRODUCTS = [
   {
     id: "LHC-014", name: "Lotus Crochet Tote Bag", category: "bags",
     description: "Sample product. A sturdy maroon tote with a golden lotus motif, roomy enough for books, shopping or a day out.",
-    price: 5500, image: "assets/images/products/tote-bag.svg",
+    price: 5500, image: "assets/images/products/tote-bag.webp",
     colours: ["Maroon & Gold", "Cream & Gold"], availability: "In Stock",
     customisation: ["Motif colour", "Fabric lining"],
     details: { Size: "Approx. 35 × 38 cm", Material: "Cotton cord yarn", Care: "Spot clean" },
