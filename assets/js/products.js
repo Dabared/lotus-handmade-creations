@@ -29,7 +29,7 @@ window.CATEGORIES = [
   { id: "wool-dolls",   name: "Wool Dolls & Teddy Bears", page: "wool-dolls-teddy-bears.html", image: "assets/images/products/rainbow-doll.webp",     blurb: "Huggable dolls and teddies with sweet stitched faces." },
   { id: "crochet-toys", name: "Crochet Toys",             page: "crochet-toys.html",           image: "assets/images/products/pastel-puppy.webp",           blurb: "Soft crochet puppies, kitties, birds and animal friends." },
   { id: "baby",         name: "Baby Collection",          page: "baby-collection.html",        image: "assets/images/products/rainbow-baby-set.webp",  blurb: "Sweaters, sets, hats, booties and blankets in baby pastels." },
-  { id: "home-decor",   name: "Home & Table Décor",       page: "home-table-decor.html",       image: "assets/images/products/table-doily.svg",   blurb: "Doilies, napkin rings and coasters for a beautiful table." },
+  { id: "home-decor",   name: "Home & Table Décor",       page: "home-table-decor.html",       image: "assets/images/products/table-doily.webp",   blurb: "Doilies, napkin rings and coasters for a beautiful table." },
   { id: "car",          name: "Car Accessories",          page: "car-accessories.html",        image: "assets/images/products/car-charm.svg",     blurb: "Mirror charms and tissue covers to brighten your ride." },
   { id: "bags",         name: "Bags & Purses",            page: "bags-purses.html",            image: "assets/images/products/tote-bag.svg",      blurb: "Everyday crochet totes and pretty coin purses." },
   { id: "accessories",  name: "Hats & Accessories",       page: "hats-accessories.html",       image: "assets/images/products/beanie.svg",        blurb: "Beanies, scrunchies and cosy wool accessories." }
@@ -48,8 +48,8 @@ window.PRODUCTS = [
   },
   {
     id: "LHC-002", name: "Classic Wool Teddy Bear", category: "wool-dolls",
-    description: "Sample product. A cuddly teddy bear with a maroon bow and a little heart — a timeless birthday or baby-shower gift.",
-    price: 3800, image: "assets/images/products/teddy-bear.svg",
+    description: "Sample product. A cuddly crochet teddy bear with a maroon bow tie — a timeless birthday or baby-shower gift.",
+    price: 3800, image: "assets/images/products/teddy-bear.webp",
     colours: ["Caramel Brown", "Cream", "Pink"], availability: "In Stock",
     customisation: ["Name embroidered on the foot", "Bow colour"],
     details: { Size: "Approx. 25 cm tall", Material: "Soft acrylic wool", Care: "Hand wash, dry flat" },
@@ -79,8 +79,8 @@ window.PRODUCTS = [
   /* ---------- Baby Collection ---------- */
   {
     id: "LHC-005", name: "Baby Booties Pair", category: "baby",
-    description: "Sample product. Soft knitted booties with cosy cuffs and tiny bows, for warm little feet.",
-    price: 1900, image: "assets/images/products/baby-booties.svg",
+    description: "Sample product. Soft pink knitted booties with cosy white cuffs and tiny bows, for warm little feet.",
+    price: 1900, image: "assets/images/products/baby-booties.webp",
     colours: ["Baby Pink", "Light Blue", "White"], availability: "In Stock",
     customisation: ["Size 0–3 / 3–6 / 6–12 months", "Bow colour"],
     details: { Size: "0–12 months", Material: "Baby-safe soft yarn", Care: "Hand wash, dry flat" },
@@ -97,9 +97,9 @@ window.PRODUCTS = [
   },
   {
     id: "LHC-007", name: "Baby Knitted Romper", category: "baby",
-    description: "Sample product. A soft knitted romper with a white collar and golden buttons — perfect for photos and special days.",
-    price: 5200, image: "assets/images/products/baby-romper.svg",
-    colours: ["Baby Pink", "Light Blue", "White"], availability: "Made to Order",
+    description: "Sample product. A soft light-blue knitted romper with a white lace collar and wooden buttons — perfect for photos and special days.",
+    price: 5200, image: "assets/images/products/baby-romper.webp",
+    colours: ["Light Blue", "Baby Pink", "White"], availability: "Made to Order",
     customisation: ["Size 0–3 / 3–6 / 6–12 months", "Baby's name embroidered"],
     details: { Size: "0–12 months", Material: "Baby-safe cotton yarn", Care: "Hand wash, dry flat" },
     featured: false, bestSeller: false, sample: true
@@ -107,7 +107,7 @@ window.PRODUCTS = [
   {
     id: "LHC-008", name: "Pink & Blue Baby Blanket", category: "baby",
     description: "Sample product. A cosy granny-square blanket in baby pink, light blue and white — a keepsake newborn gift.",
-    price: 8500, image: "assets/images/products/baby-blanket.svg",
+    price: 8500, image: "assets/images/products/baby-blanket.webp",
     colours: ["Pink & Blue", "Pink & White", "Blue & White"], availability: "Made to Order",
     customisation: ["Colour combination", "Baby's name embroidered"],
     details: { Size: "Approx. 75 × 90 cm", Material: "Baby-safe acrylic", Care: "Gentle machine wash, cool" },
@@ -118,7 +118,7 @@ window.PRODUCTS = [
   {
     id: "LHC-009", name: "Lace Table Doily", category: "home-decor",
     description: "Sample product. A round crochet lace doily in cream with gold and maroon details — beautiful on a dining or side table.",
-    price: 3500, image: "assets/images/products/table-doily.svg",
+    price: 3500, image: "assets/images/products/table-doily.webp",
     colours: ["Cream & Gold", "White", "Maroon & Gold"], availability: "Made to Order",
     customisation: ["Size: 30 / 45 / 60 cm", "Colour combination"],
     details: { Size: "30 – 60 cm diameter", Material: "Mercerised cotton thread", Care: "Hand wash, press gently" },
