@@ -527,3 +527,12 @@ body.no-scroll { overflow: hidden; }
   .cat-grid > .cat-card:last-child:nth-child(odd) { grid-column: 1 / -1; flex-direction: row; align-items: center; }
   .cat-grid > .cat-card:last-child:nth-child(odd) img { width: 45%; }
 }
+
+/* Category cards: centred rows so 7 categories sit neatly (3 per row on tablet, 4 on desktop) */
+@media (min-width: 640px) {
+  .cat-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+  .cat-grid > .cat-card { width: calc((100% - 36px) / 3); }
+}
+@media (min-width: 980px) {
+  .cat-grid > .cat-card { width: calc((100% - 54px) / 4); }
+}

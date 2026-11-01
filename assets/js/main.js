@@ -36,17 +36,23 @@
   function productUrl(p) { return "product.html?id=" + encodeURIComponent(p.id); }
 
   var COLOUR_MAP = {
-    pink: "#F6C6D5", "blush pink": "#F4B9CB", lavender: "#DCD2F5", lilac: "#CFC2EE", mint: "#D7EBDD",
-    "sage green": "#BFD8C3", cream: "#FFF3DF", white: "#FFFFFF", brown: "#A47C68", "caramel brown": "#C9A189",
-    "natural beige": "#EAD7BD", "sky blue": "#B8DAEE", grey: "#CFCACA", "pastel mix": "linear-gradient(135deg,#F6C6D5 0 33%,#DCD2F5 33% 66%,#D7EBDD 66%)"
+    maroon: "#7A2050", gold: "#F2BE3A", pink: "#F6C1D1", "baby pink": "#F6C1D1", "blush pink": "#F4B9CB",
+    blue: "#BFDDF2", "light blue": "#BFDDF2", "sky blue": "#BFDDF2", lavender: "#DCD2F5", lilac: "#CFC2EE",
+    mint: "#D7EBDD", "sage green": "#BFD8C3", cream: "#FBF3E4", white: "#FFFFFF", brown: "#A47C68",
+    "caramel brown": "#C9926A", ginger: "#E8A25E", "natural beige": "#EAD7BD", grey: "#C9C3CF",
+    mixed: "linear-gradient(135deg,#7A2050 0 33%,#F2BE3A 33% 66%,#FBF3E4 66%)",
+    "pastel mix": "linear-gradient(135deg,#F6C1D1 0 33%,#BFDDF2 33% 66%,#FFFFFF 66%)"
   };
   function swatchStyle(name) {
     var key = String(name).toLowerCase();
     if (COLOUR_MAP[key]) return "background:" + COLOUR_MAP[key];
-    // combos like "Mint & Pink"
-    var parts = key.split(/\s*&\s*/);
-    if (parts.length > 1 && COLOUR_MAP[parts[0]] && COLOUR_MAP[parts[1]]) {
-      return "background:linear-gradient(135deg," + COLOUR_MAP[parts[0]] + " 0 50%," + COLOUR_MAP[parts[1]] + " 50%)";
+    // combos like "Maroon & Gold" or "Maroon, Gold & Pink"
+    var parts = key.split(/\s*(?:&|,)\s*/).filter(function (p) { return COLOUR_MAP[p]; });
+    if (parts.length > 1) {
+      var step = 100 / parts.length, stops = parts.map(function (p, i) {
+        return COLOUR_MAP[p] + " " + (i * step).toFixed(0) + "% " + ((i + 1) * step).toFixed(0) + "%";
+      });
+      return "background:linear-gradient(135deg," + stops.join(",") + ")";
     }
     return "background:#EEE";
   }
