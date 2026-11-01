@@ -41,7 +41,12 @@
     mint: "#D7EBDD", "sage green": "#BFD8C3", cream: "#FBF3E4", white: "#FFFFFF", brown: "#A47C68",
     "caramel brown": "#C9926A", ginger: "#E8A25E", "natural beige": "#EAD7BD", grey: "#C9C3CF",
     mixed: "linear-gradient(135deg,#7A2050 0 33%,#F2BE3A 33% 66%,#FBF3E4 66%)",
-    "pastel mix": "linear-gradient(135deg,#F6C1D1 0 33%,#BFDDF2 33% 66%,#FFFFFF 66%)"
+    "pastel mix": "linear-gradient(135deg,#F6C1D1 0 33%,#BFDDF2 33% 66%,#FFFFFF 66%)",
+    rainbow: "linear-gradient(135deg,#E8457A,#F59A3C,#F5D33C,#5DBB63,#3C9BE8,#8A5CD6)",
+    "rainbow pastel": "linear-gradient(135deg,#F6B3C6,#F9D3A5,#F7EBA0,#B9E3BE,#B4D7F2,#CDB9EC)",
+    "bright mix": "linear-gradient(135deg,#D93A3A 0 33%,#F5CF3C 33% 66%,#2BB3C4 66%)",
+    "pastel stripes": "linear-gradient(135deg,#F6C1D1 0 25%,#F7EBA0 25% 50%,#BFDDF2 50% 75%,#D9C9EE 75%)",
+    "cream & brown": "linear-gradient(135deg,#FBF3E4 0 50%,#A47C68 50%)"
   };
   function swatchStyle(name) {
     var key = String(name).toLowerCase();

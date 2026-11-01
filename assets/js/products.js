@@ -26,9 +26,9 @@
    ===================================================================== */
 
 window.CATEGORIES = [
-  { id: "wool-dolls",   name: "Wool Dolls & Teddy Bears", page: "wool-dolls-teddy-bears.html", image: "assets/images/products/wool-doll.svg",     blurb: "Huggable dolls and teddies with sweet stitched faces." },
-  { id: "crochet-toys", name: "Crochet Toys",             page: "crochet-toys.html",           image: "assets/images/products/cat.svg",           blurb: "Soft crochet birds, cats and animal friends." },
-  { id: "baby",         name: "Baby Collection",          page: "baby-collection.html",        image: "assets/images/products/baby-booties.svg",  blurb: "Booties, hats, rompers and blankets in baby pink & blue." },
+  { id: "wool-dolls",   name: "Wool Dolls & Teddy Bears", page: "wool-dolls-teddy-bears.html", image: "assets/images/products/rainbow-doll.webp",     blurb: "Huggable dolls and teddies with sweet stitched faces." },
+  { id: "crochet-toys", name: "Crochet Toys",             page: "crochet-toys.html",           image: "assets/images/products/pastel-puppy.webp",           blurb: "Soft crochet puppies, kitties, birds and animal friends." },
+  { id: "baby",         name: "Baby Collection",          page: "baby-collection.html",        image: "assets/images/products/rainbow-baby-set.webp",  blurb: "Sweaters, sets, hats, booties and blankets in baby pastels." },
   { id: "home-decor",   name: "Home & Table Décor",       page: "home-table-decor.html",       image: "assets/images/products/table-doily.svg",   blurb: "Doilies, napkin rings and coasters for a beautiful table." },
   { id: "car",          name: "Car Accessories",          page: "car-accessories.html",        image: "assets/images/products/car-charm.svg",     blurb: "Mirror charms and tissue covers to brighten your ride." },
   { id: "bags",         name: "Bags & Purses",            page: "bags-purses.html",            image: "assets/images/products/tote-bag.svg",      blurb: "Everyday crochet totes and pretty coin purses." },
@@ -38,12 +38,12 @@ window.CATEGORIES = [
 window.PRODUCTS = [
   /* ---------- Wool Dolls & Teddy Bears ---------- */
   {
-    id: "LHC-001", name: "Little Lotus Wool Doll", category: "wool-dolls",
-    description: "Sample product. A sweet handmade wool doll in a maroon dress with a gold flower, long plaits and a little bow.",
-    price: 4500, image: "assets/images/products/wool-doll.svg",
-    colours: ["Maroon", "Pink", "Light Blue"], availability: "Made to Order",
-    customisation: ["Dress colour", "Hair colour", "Name tag"],
-    details: { Size: "Approx. 30 cm tall", Material: "Soft acrylic & cotton yarn", Care: "Hand wash, dry flat" },
+    id: "LHC-001", name: "Rainbow Wool Doll", category: "wool-dolls",
+    description: "Sample product. A sweet crochet doll with long brown curls, a rainbow-striped dress, a little heart and a flower hair clip.",
+    price: 4800, image: "assets/images/products/rainbow-doll.webp",
+    colours: ["Rainbow", "Pink", "Maroon & Gold"], availability: "Made to Order",
+    customisation: ["Dress colours", "Hair colour & style", "Name tag"],
+    details: { Size: "Approx. 30 cm tall", Material: "Soft cotton yarn", Care: "Hand wash, dry flat" },
     featured: true, bestSeller: true, sample: true
   },
   {
@@ -58,21 +58,21 @@ window.PRODUCTS = [
 
   /* ---------- Crochet Toys ---------- */
   {
-    id: "LHC-003", name: "Crochet Sky Bird", category: "crochet-toys",
-    description: "Sample product. A round, happy little bird with a pink wing and golden beak — light and squishy for small hands.",
-    price: 2200, image: "assets/images/products/bird.svg",
-    colours: ["Light Blue", "Pink", "Gold"], availability: "In Stock",
-    customisation: ["Body colour"],
-    details: { Size: "Approx. 14 cm", Material: "Milk-cotton yarn", Care: "Hand wash" },
+    id: "LHC-003", name: "Crochet Birds (Set of 3)", category: "crochet-toys",
+    description: "Sample product. Three chubby crochet birds with stitched wing details and golden beaks — bright, cheerful and perfect for little hands or a shelf.",
+    price: 3900, image: "assets/images/products/crochet-birds.webp",
+    colours: ["Bright Mix", "Pastel Mix", "Light Blue"], availability: "In Stock",
+    customisation: ["Choose the colours of each bird", "Buy singly or as a set"],
+    details: { Size: "Approx. 10 cm each", Material: "Cotton yarn", Care: "Hand wash" },
     featured: true, bestSeller: false, sample: true
   },
   {
-    id: "LHC-004", name: "Crochet Kitty Cat", category: "crochet-toys",
-    description: "Sample product. A sitting kitty with a maroon collar and golden bell, whiskers and a curly tail.",
-    price: 3200, image: "assets/images/products/cat.svg",
-    colours: ["Grey", "White", "Ginger"], availability: "Made to Order",
-    customisation: ["Fur colour", "Collar colour"],
-    details: { Size: "Approx. 20 cm", Material: "Cotton-blend yarn", Care: "Hand wash, dry flat" },
+    id: "LHC-004", name: "Pastel Striped Kitty", category: "crochet-toys",
+    description: "Sample product. A sitting crochet kitty in soft lilac, peach and orange stripes with a cream face, whiskers and big shiny eyes.",
+    price: 3600, image: "assets/images/products/striped-kitty.webp",
+    colours: ["Pastel Stripes", "Grey", "Ginger"], availability: "Made to Order",
+    customisation: ["Stripe colours"],
+    details: { Size: "Approx. 22 cm", Material: "Cotton-blend yarn", Care: "Hand wash, dry flat" },
     featured: true, bestSeller: true, sample: true
   },
 
@@ -84,16 +84,16 @@ window.PRODUCTS = [
     colours: ["Baby Pink", "Light Blue", "White"], availability: "In Stock",
     customisation: ["Size 0–3 / 3–6 / 6–12 months", "Bow colour"],
     details: { Size: "0–12 months", Material: "Baby-safe soft yarn", Care: "Hand wash, dry flat" },
-    featured: true, bestSeller: true, sample: true
+    featured: false, bestSeller: true, sample: true
   },
   {
-    id: "LHC-006", name: "Baby Bear-Ear Hat", category: "baby",
-    description: "Sample product. A snug knitted baby hat with little bear ears and a crochet flower.",
-    price: 1800, image: "assets/images/products/baby-hat.svg",
-    colours: ["Light Blue", "Baby Pink", "White"], availability: "In Stock",
-    customisation: ["Size 0–6 / 6–12 months", "Flower colour"],
-    details: { Size: "0–12 months", Material: "Baby-safe soft yarn", Care: "Hand wash" },
-    featured: false, bestSeller: true, sample: true
+    id: "LHC-006", name: "Baby Beanie Hats", category: "baby",
+    description: "Sample product. Cosy crochet baby beanies — choose bear ears or a fluffy pom-pom, in blue, pink or pastel stripes.",
+    price: 1800, image: "assets/images/products/baby-hats.webp",
+    colours: ["Light Blue", "Baby Pink", "Pastel Stripes"], availability: "In Stock",
+    customisation: ["Bear ears or pom-pom", "Size 0–6 / 6–12 / 12–24 months"],
+    details: { Size: "0–24 months", Material: "Baby-safe soft yarn", Care: "Hand wash" },
+    featured: true, bestSeller: true, sample: true
   },
   {
     id: "LHC-007", name: "Baby Knitted Romper", category: "baby",
@@ -102,7 +102,7 @@ window.PRODUCTS = [
     colours: ["Baby Pink", "Light Blue", "White"], availability: "Made to Order",
     customisation: ["Size 0–3 / 3–6 / 6–12 months", "Baby's name embroidered"],
     details: { Size: "0–12 months", Material: "Baby-safe cotton yarn", Care: "Hand wash, dry flat" },
-    featured: true, bestSeller: false, sample: true
+    featured: false, bestSeller: false, sample: true
   },
   {
     id: "LHC-008", name: "Pink & Blue Baby Blanket", category: "baby",
@@ -122,7 +122,7 @@ window.PRODUCTS = [
     colours: ["Cream & Gold", "White", "Maroon & Gold"], availability: "Made to Order",
     customisation: ["Size: 30 / 45 / 60 cm", "Colour combination"],
     details: { Size: "30 – 60 cm diameter", Material: "Mercerised cotton thread", Care: "Hand wash, press gently" },
-    featured: true, bestSeller: true, sample: true
+    featured: false, bestSeller: true, sample: true
   },
   {
     id: "LHC-010", name: "Flower Napkin Rings (Set of 6)", category: "home-decor",
@@ -151,7 +151,7 @@ window.PRODUCTS = [
     colours: ["Maroon & Gold", "Pink & White", "Light Blue & White"], availability: "In Stock",
     customisation: ["Flower colour", "Add initial bead"],
     details: { Size: "Approx. 22 cm drop", Material: "Cotton yarn & wooden beads", Care: "Spot clean" },
-    featured: true, bestSeller: true, sample: true
+    featured: false, bestSeller: true, sample: true
   },
   {
     id: "LHC-013", name: "Car Tissue Box Cover", category: "car",
@@ -201,5 +201,34 @@ window.PRODUCTS = [
     customisation: ["Choose your 3 colours"],
     details: { Size: "One size", Material: "Cotton yarn, soft elastic", Care: "Hand wash" },
     featured: false, bestSeller: false, sample: true
+  },
+
+  /* ---------- New additions ---------- */
+  {
+    id: "LHC-018", name: "Pastel Puppy", category: "crochet-toys",
+    description: "Sample product. A happy crochet puppy in pastel yellow with floppy pink and blue ears, a mint bandana and chunky little paws.",
+    price: 3900, image: "assets/images/products/pastel-puppy.webp",
+    colours: ["Pastel Mix", "Cream & Brown", "Light Blue"], availability: "Made to Order",
+    customisation: ["Ear & paw colours", "Name on bandana"],
+    details: { Size: "Approx. 24 cm", Material: "Milk-cotton yarn", Care: "Hand wash, dry flat" },
+    featured: true, bestSeller: true, sample: true
+  },
+  {
+    id: "LHC-019", name: "Heart Baby Sweater", category: "baby",
+    description: "Sample product. A soft knitted baby sweater in pink, light blue, yellow and white stripes with rows of little hearts and shoulder buttons.",
+    price: 4500, image: "assets/images/products/heart-baby-sweater.webp",
+    colours: ["Pastel Stripes", "Pink & White", "Blue & White"], availability: "Made to Order",
+    customisation: ["Size 0–6 / 6–12 / 12–24 months", "Heart colour"],
+    details: { Size: "0–24 months", Material: "Baby-safe soft yarn", Care: "Hand wash, dry flat" },
+    featured: true, bestSeller: false, sample: true
+  },
+  {
+    id: "LHC-020", name: "Rainbow Baby Set (Hat, Cardigan & Booties)", category: "baby",
+    description: "Sample product. A matching rainbow set — pom-pom hat, button-up cardigan and tie-up booties. A beautiful newborn or first-birthday gift.",
+    price: 9500, image: "assets/images/products/rainbow-baby-set.webp",
+    colours: ["Rainbow Pastel", "Baby Pink", "Light Blue"], availability: "Made to Order",
+    customisation: ["Size 0–3 / 3–6 / 6–12 months", "Gift wrapping"],
+    details: { Size: "0–12 months", Material: "Baby-safe soft yarn", Care: "Hand wash, dry flat" },
+    featured: true, bestSeller: true, sample: true
   }
 ];
