@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Wool bunny doll (placeholder illustration)">
+<defs><pattern id="k" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M8 14 L20 26 L32 14" fill="none" stroke="#BBAEE6" stroke-width="3" stroke-linecap="round" opacity=".35"/></pattern>
+<radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="800" height="800" fill="#F1ECFB"/><rect width="800" height="800" fill="url(#k)"/><circle cx="400" cy="380" r="330" fill="url(#g)"/>
+<ellipse cx="400" cy="690" rx="230" ry="26" fill="#80665B" opacity=".12"/>
+<g stroke="#80665B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M330 260 C300 120 320 60 352 60 C385 60 390 150 375 255" fill="#FFFFFF"/><path d="M340 230 C330 140 340 95 352 95 C365 95 368 160 360 230" fill="#F6C6D5" stroke="none"/>
+<path d="M470 260 C500 120 480 60 448 60 C415 60 410 150 425 255" fill="#FFFFFF"/><path d="M460 230 C470 140 460 95 448 95 C435 95 432 160 440 230" fill="#F6C6D5" stroke="none"/>
+<path d="M290 470 Q400 420 510 470 L560 650 Q400 700 240 650 Z" fill="#DCD2F5"/>
+<path d="M260 560 Q400 600 540 560" fill="none" opacity=".5"/>
+<circle cx="400" cy="330" r="125" fill="#FFFFFF"/><circle cx="362" cy="330" r="9" fill="#80665B" stroke="none"/><circle cx="438" cy="330" r="9" fill="#80665B" stroke="none"/>
+<ellipse cx="338" cy="360" rx="16" ry="10" fill="#F6C6D5" stroke="none"/><ellipse cx="462" cy="360" rx="16" ry="10" fill="#F6C6D5" stroke="none"/>
+<path d="M386 358 Q400 372 414 358" fill="none"/>
+<circle cx="300" cy="505" r="30" fill="#FFFFFF"/><circle cx="500" cy="505" r="30" fill="#FFFFFF"/>
+<path d="M440 210 l30 -18 l4 30 l-30 6z M470 192 l30 -6 l-10 30z" fill="#D7EBDD"/></g>
+<text x="400" y="770" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="22" font-weight="700" fill="#80665B" opacity=".55" stroke="none" letter-spacing="3">SAMPLE IMAGE</text>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dabared.github.io/lotus-handmade-creations/sitemap.xml

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Crochet tote bag (placeholder illustration)">
+<defs><pattern id="k" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M8 14 L20 26 L32 14" fill="none" stroke="#E4C7A6" stroke-width="3" stroke-linecap="round" opacity=".35"/></pattern>
+<radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="800" height="800" fill="#FFF4E6"/><rect width="800" height="800" fill="url(#k)"/><circle cx="400" cy="380" r="330" fill="url(#g)"/>
+<ellipse cx="400" cy="690" rx="230" ry="26" fill="#80665B" opacity=".12"/>
+<g stroke="#80665B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M300 300 C300 150 500 150 500 300" fill="none" stroke-width="22" stroke="#C9A189"/>
+<path d="M300 300 C300 150 500 150 500 300" fill="none" stroke-width="7"/>
+<path d="M210 290 L590 290 L560 660 L240 660 Z" fill="#F6D9B8"/>
+<path d="M225 330 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0" fill="none" stroke-width="4" opacity=".35"/><path d="M225 385 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0" fill="none" stroke-width="4" opacity=".35"/><path d="M225 440 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0" fill="none" stroke-width="4" opacity=".35"/><path d="M225 495 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0" fill="none" stroke-width="4" opacity=".35"/><path d="M225 550 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0" fill="none" stroke-width="4" opacity=".35"/><path d="M225 605 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0 q22 18 44 0" fill="none" stroke-width="4" opacity=".35"/>
+<g transform="translate(400 470)"><path d="M0 -55 C30 -25 30 15 0 40 C-30 15 -30 -25 0 -55Z" fill="#F6C6D5"/><path d="M0 40 C-10 0 -55 -15 -75 -5 C-60 25 -30 40 0 40Z" fill="#DCD2F5"/><path d="M0 40 C10 0 55 -15 75 -5 C60 25 30 40 0 40Z" fill="#DCD2F5"/></g></g>
+<text x="400" y="770" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="22" font-weight="700" fill="#80665B" opacity=".55" stroke="none" letter-spacing="3">SAMPLE IMAGE</text>
+</svg>

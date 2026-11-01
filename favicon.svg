@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lotus Handmade Creations logo">
+<g stroke="#80665B" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
+<path d="M60 22 C74 36 76 58 60 78 C44 58 46 36 60 22Z" fill="#F6C6D5"/>
+<path d="M60 78 C52 58 34 46 18 48 C20 64 36 78 60 78Z" fill="#DCD2F5"/>
+<path d="M60 78 C68 58 86 46 102 48 C100 64 84 78 60 78Z" fill="#DCD2F5"/>
+<path d="M60 78 C46 72 30 72 14 80 C28 90 46 88 60 78Z" fill="#D7EBDD"/>
+<path d="M60 78 C74 72 90 72 106 80 C92 90 74 88 60 78Z" fill="#D7EBDD"/>
+<path d="M56 40 Q60 48 64 40" fill="none" opacity=".55"/>
+<path d="M22 98 C38 90 50 104 64 96 S90 92 100 100" fill="none" stroke-dasharray="1 7"/>
+</g></svg>
