@@ -41,12 +41,12 @@ window.SITE_CONFIG = {
      While "url" is empty the site will NOT pretend a form exists —
      customers are offered WhatsApp instead.                         */
   googleForm: {
-    url: "",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScwnf3M8jMhvvuXynKGYHvugWokTB6K0y_PUCUB9AnEeyD09Q/viewform",
     fields: {
-      productName: "",       // e.g. "entry.1234567890"
-      productId: "",
-      quantity: "",
-      colour: ""
+      productName: "entry.113237028",
+      productId: "entry.1453302926",
+      quantity: "entry.1113560969",
+      colour: "entry.767190822"
     }
   },
 
