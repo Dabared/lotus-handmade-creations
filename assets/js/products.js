@@ -32,7 +32,7 @@ window.CATEGORIES = [
   { id: "home-decor",   name: "Home & Table Décor",       page: "home-table-decor.html",       image: "assets/images/products/table-doily.webp",   blurb: "Doilies, napkin rings and coasters for a beautiful table." },
   { id: "car",          name: "Car Accessories",          page: "car-accessories.html",        image: "assets/images/products/car-charm.webp",     blurb: "Mirror charms and tissue covers to brighten your ride." },
   { id: "bags",         name: "Bags & Purses",            page: "bags-purses.html",            image: "assets/images/products/tote-bag.webp",      blurb: "Everyday crochet totes and pretty coin purses." },
-  { id: "accessories",  name: "Hats & Accessories",       page: "hats-accessories.html",       image: "assets/images/products/beanie.svg",        blurb: "Beanies, scrunchies and cosy wool accessories." }
+  { id: "accessories",  name: "Hats & Accessories",       page: "hats-accessories.html",       image: "assets/images/products/beanie.webp",        blurb: "Beanies, scrunchies and cosy wool accessories." }
 ];
 
 window.PRODUCTS = [
@@ -176,7 +176,7 @@ window.PRODUCTS = [
   {
     id: "LHC-015", name: "Flower Coin Purse", category: "bags",
     description: "Sample product. A small kiss-clasp purse in soft pink with a maroon crochet flower.",
-    price: 1800, image: "assets/images/products/coin-purse.svg",
+    price: 1800, image: "assets/images/products/coin-purse.webp",
     colours: ["Pink", "Light Blue", "Cream"], availability: "In Stock",
     customisation: ["Purse colour", "Flower colour"],
     details: { Size: "Approx. 12 × 10 cm", Material: "Cotton yarn, metal clasp", Care: "Spot clean" },
@@ -186,8 +186,8 @@ window.PRODUCTS = [
   /* ---------- Hats & Accessories ---------- */
   {
     id: "LHC-016", name: "Maroon Pom-Pom Beanie", category: "accessories",
-    description: "Sample product. A ribbed maroon beanie with a golden pom-pom, ideal for hill-country trips and chilly mornings.",
-    price: 2700, image: "assets/images/products/beanie.svg",
+    description: "Sample product. A ribbed maroon beanie with a fluffy golden pom-pom, ideal for hill-country trips and chilly mornings.",
+    price: 2700, image: "assets/images/products/beanie.webp",
     colours: ["Maroon", "Cream", "Light Blue", "Pink"], availability: "In Stock",
     customisation: ["Kids / Adult size", "Pom-pom colour"],
     details: { Size: "Kids & adult sizes", Material: "Soft acrylic wool", Care: "Hand wash" },
@@ -196,7 +196,7 @@ window.PRODUCTS = [
   {
     id: "LHC-017", name: "Crochet Scrunchie Set", category: "accessories",
     description: "Sample product. Three soft crochet scrunchies in maroon, gold and pink — gentle on hair.",
-    price: 1200, image: "assets/images/products/scrunchies.svg",
+    price: 1200, image: "assets/images/products/scrunchies.webp",
     colours: ["Maroon, Gold & Pink", "Pastel Mix"], availability: "Out of Stock",
     customisation: ["Choose your 3 colours"],
     details: { Size: "One size", Material: "Cotton yarn, soft elastic", Care: "Hand wash" },
