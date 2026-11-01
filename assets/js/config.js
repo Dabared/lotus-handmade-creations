@@ -20,7 +20,7 @@ window.SITE_CONFIG = {
   /* ---------------- WhatsApp ----------------
      International format, digits only, no "+" or spaces.
      Sri Lanka example: 0771234567  ->  "94771234567"            */
-  whatsappNumber: "",
+  whatsappNumber: "94773465559",
 
   /* ---------------- Contact details (shown on Contact page & footer) --- */
   phoneDisplay: "",          // e.g. "077 123 4567"
