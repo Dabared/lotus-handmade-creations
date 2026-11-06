@@ -196,7 +196,24 @@ While `url` is empty, the site **does not pretend** a form exists — customers 
 
 ## 7. Managing products
 
-All products live in **`assets/js/products.js`**. The page layouts read from this file, so you never edit HTML to change products.
+### Easiest: edit the Google Sheet (updates the website automatically)
+
+The website reads its products live from the Google Sheet
+**[Lotus Handmade – Website Products](https://docs.google.com/spreadsheets/d/17TqoXr_RrKNYZe5-tk_8WixAieV2ijPcil2Tix1qEZ8/edit)**.
+
+- Change a name, price, photo or stock status in the **Products** tab → refresh the website → done. No code, no GitHub.
+- **Add a product** = add a row. **Hide a product** = set *Show on Website* to `No`.
+- **Photo**: type a file name already on the site (e.g. `teddy-bear.webp`) or paste a Google Drive photo link (share the photo as *Anyone with the link → Viewer*).
+- Colours and customisation options are separated by commas.
+- The **How to use** tab explains every column.
+- The sheet must stay shared as *Anyone with the link → Viewer* (it only contains what the website already shows). Keep customer/order data in the separate Orders sheet, never in this one.
+- Visitors' browsers keep a copy for 1 minute, so a change can take up to a minute to appear.
+
+The setting is `productSheet` in `assets/js/config.js`. If the sheet can't be reached, the site automatically falls back to **`assets/js/products.js`** (below), so keep that file roughly up to date or set `productSheet.id` to `""` to use only the file.
+
+### Alternative: edit products.js
+
+All backup products live in **`assets/js/products.js`**. The page layouts read from this file, so you never edit HTML to change products.
 
 ### Add a product
 

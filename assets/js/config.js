@@ -50,6 +50,18 @@ window.SITE_CONFIG = {
     }
   },
 
+  /* PRODUCTS FROM GOOGLE SHEET
+     The website reads products live from this Google Sheet:
+     https://docs.google.com/spreadsheets/d/17TqoXr_RrKNYZe5-tk_8WixAieV2ijPcil2Tix1qEZ8/edit
+     Edit the "Products" tab and refresh the site — no code changes.
+     The sheet must be shared "Anyone with the link → Viewer".
+     Set id to "" to use assets/js/products.js instead.
+     (products.js is also the automatic backup if the sheet can't load.) */
+  productSheet: {
+    id: "17TqoXr_RrKNYZe5-tk_8WixAieV2ijPcil2Tix1qEZ8",
+    tab: "Products"
+  },
+
   /* Delivery note used on product pages and policies. Edit freely. */
   deliveryNote: "Island-wide delivery across Sri Lanka. Delivery charges are confirmed with you before your order is finalised.",
 

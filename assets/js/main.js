@@ -27,6 +27,7 @@
     return '<svg class="icon ' + (cls || "") + '" aria-hidden="true" focusable="false"><use href="#i-' + name + '"></use></svg>';
   }
   function formatPrice(n) {
+    if (n === null || n === undefined || n === "") return "Price on request";
     var num = Number(n);
     if (!isFinite(num)) return "Price on request";
     return (CFG.currency || "LKR") + " " + num.toLocaleString("en-LK", { maximumFractionDigits: 0 });
@@ -87,7 +88,7 @@
       "Quantity: " + qty
     ];
     if (colour) lines.push("Preferred colour: " + colour);
-    if (qty > 1 && isFinite(Number(p.price))) lines.push("Estimated total: " + formatPrice(Number(p.price) * qty) + " (+ delivery)");
+    if (qty > 1 && p.price != null && p.price !== "" && isFinite(Number(p.price))) lines.push("Estimated total: " + formatPrice(Number(p.price) * qty) + " (+ delivery)");
     lines.push("", "Product link: " + absoluteUrl(productUrl(p)));
     return lines.join("\n");
   }
@@ -509,8 +510,100 @@
   /* ------------------------------------------------------------------
      Boot
      ------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------
+     Products from Google Sheet (optional)
+     If SITE_CONFIG.productSheet.id is set, products are read live from
+     that (view-only, public) Google Sheet. products.js is the backup
+     used if the sheet can't be reached.
+     ------------------------------------------------------------------ */
+  function parseCSV(text) {
+    var rows = [], row = [], cell = "", q = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+        else cell += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(cell); cell = ""; }
+      else if (c === "\n" || c === "\r") {
+        if (c === "\r" && text[i + 1] === "\n") i++;
+        row.push(cell); rows.push(row); row = []; cell = "";
+      } else cell += c;
+    }
+    if (cell !== "" || row.length) { row.push(cell); rows.push(row); }
+    return rows;
+  }
+  function photoUrl(v) {
+    v = String(v || "").trim();
+    if (!v) return "assets/images/brand/logo-mark.svg";
+    var m = v.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/);
+    if (m) return "https://lh3.googleusercontent.com/d/" + m[1] + "=w1000";
+    if (/^https?:\/\//i.test(v) || v.indexOf("/") !== -1) return v;
+    return "assets/images/products/" + v;
+  }
+  function sheetToProducts(rows) {
+    if (!rows.length) return [];
+    var head = rows[0].map(function (h) { return String(h).trim().toLowerCase(); });
+    function col(name) { return head.indexOf(name); }
+    function list(v) { return String(v || "").split(",").map(function (x) { return x.trim(); }).filter(Boolean); }
+    function yes(v) { return /^(yes|y|true|1|ඔව්|ஆம்)$/i.test(String(v || "").trim()); }
+    var C = {
+      id: col("id"), name: col("name"), category: col("category"), description: col("description"),
+      price: col("price (lkr)") >= 0 ? col("price (lkr)") : col("price"), image: col("photo"),
+      colours: col("colours"), availability: col("availability"), customisation: col("customisation"),
+      size: col("size"), material: col("material"), care: col("care"), featured: col("featured"),
+      bestSeller: col("best seller"), show: col("show on website"), sample: col("sample")
+    };
+    if (C.id < 0 || C.name < 0) return [];
+    var out = [];
+    rows.slice(1).forEach(function (r) {
+      function g(k) { return C[k] >= 0 && r[C[k]] != null ? String(r[C[k]]).trim() : ""; }
+      if (!g("id") || !g("name")) return;
+      if (C.show >= 0 && g("show") && !yes(g("show"))) return;
+      var price = g("price").replace(/[^\d.]/g, "");
+      var details = {};
+      if (g("size")) details.Size = g("size");
+      if (g("material")) details.Material = g("material");
+      if (g("care")) details.Care = g("care");
+      out.push({
+        id: g("id"), name: g("name"), category: g("category"), description: g("description"),
+        price: price === "" ? null : Number(price), image: photoUrl(g("image")),
+        colours: list(g("colours")), availability: g("availability") || "Made to Order",
+        customisation: list(g("customisation")), details: details,
+        featured: yes(g("featured")), bestSeller: yes(g("bestSeller")), sample: yes(g("sample"))
+      });
+    });
+    return out;
+  }
+  function loadSheetProducts(done) {
+    var sh = CFG.productSheet || {};
+    if (!sh.id || !window.fetch) return done();
+    var KEY = "lh-products-" + sh.id, finished = false;
+    function finish(list) {
+      if (finished) return; finished = true;
+      if (list && list.length) { PRODUCTS.length = 0; Array.prototype.push.apply(PRODUCTS, list); }
+      done();
+    }
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(KEY) || "null");
+      if (cached && Date.now() - cached.t < 60000 && cached.p.length) return finish(cached.p);
+    } catch (e) {}
+    setTimeout(function () { finish(null); }, 6000);
+    var url = "https://docs.google.com/spreadsheets/d/" + encodeURIComponent(sh.id) +
+      "/gviz/tq?tqx=out:csv&headers=1&sheet=" + encodeURIComponent(sh.tab || "Products") + "&_=" + Date.now();
+    fetch(url, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error(r.status); return r.text();
+    }).then(function (t) {
+      var list = sheetToProducts(parseCSV(t));
+      try { if (list.length) sessionStorage.setItem(KEY, JSON.stringify({ t: Date.now(), p: list })); } catch (e) {}
+      finish(list);
+    }).catch(function () { finish(null); });
+  }
+
   initConfig();
   initHeader();
+  loadSheetProducts(boot);
+  function boot() {
   var el;
   if ((el = $("[data-categories]"))) renderCategories(el);
   if ((el = $("[data-featured]"))) renderList(el, PRODUCTS.filter(function (p) { return p.featured; }), 8);
@@ -521,4 +614,5 @@
   if ((el = $("[data-product]"))) initProduct(el);
   initCustom();
   initReveal(document);
+  }
 })();
